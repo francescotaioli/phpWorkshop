@@ -12,7 +12,7 @@ $query = "INSERT INTO calciatore (nome, cognome, data_nascita,ruolo) VALUES ('$n
  
 // Esecuzione della query e controllo degli eventuali errori
 if (!$connessione->query($query)) {
-    die($mysqli->error);
+    die($connessione->error);
 }else{
     echo 'inserimento riuscito';
 }
