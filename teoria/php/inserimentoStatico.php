@@ -1,6 +1,7 @@
+
 <?php
 
-include '../connection/connection.php';
+include '../../connection/connection.php';
 
 $nome = "Pippo";
 $cognome = "Baudo";
