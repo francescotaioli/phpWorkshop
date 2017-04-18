@@ -24,10 +24,10 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Elenco calciatori</a>
+      <a class="navbar-brand" href="../index.html">Elenco calciatori</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Inserisci</a></li>
+      <li class="active"><a href="inserisci.php">Inserisci</a></li>
       <li><a href="#">Modifica</a></li>
     
     </ul>
@@ -61,9 +61,9 @@
             if ($result->num_rows > 0) {
                 // output data of each row
                 while($row = $result->fetch_assoc()) {
-                    echo "id: " . $row["descrizione"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+            
                     echo "<tr>" ;//open tr
-                    echo "";
+                    echo "<td>" .$row["nome"]. "</td>" . "<td>" .$row["cognome"]. "</td>" ."<td>" .$row["data_nascita"]. "</td>" ."<td>" .$row["descrizione"]. "</td>";
                     echo "</tr>";//close tr
                 }
             } else {
@@ -72,21 +72,6 @@
             $connessione->close();
             ?>
 
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
 
     </tbody>
   </table>
