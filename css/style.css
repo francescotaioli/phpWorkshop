@@ -1,0 +1,33 @@
+.box{
+    background-color: #66BB6A;
+    width: 100%;
+    height: 40%;
+    top: 0px;
+    position: absolute;
+}
+.robotoWhiteTitle{
+    font-family: Roboto, sans-serif;
+    font-size: 3em;
+    font-weight: 100;
+    line-height: 1em;
+    letter-spacing: 0.40em;
+    color: white;
+    display: inline-block;
+    margin-top: 2em;
+    text-align: center;
+    padding: 0.65em 0 0.65em 0.7em;
+}
+
+.center-bottom{
+   position: absolute;
+   bottom: 15px;
+   text-align: center;
+   width: 100%;
+}
+
+.center{
+   position: absolute;
+   top: 5px;
+   text-align: center;
+   width: 100%;
+}
