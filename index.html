@@ -35,11 +35,16 @@
       <img src="http://tuttodilettanti.altervista.org/wp-content/uploads/2014/10/WS090-11.png"></img>
     </div>
     <div class="center-bottom">
-      <button type="button" class="btn btn-secondary" onClick="document.location.href='inserisci.php'">GO!</button>
+      <button type="button" class="btn btn-secondary">GO!</button>
     </div>
   </div>
 
-
+<script>
+  $( ".btn.btn-secondary" ).click(function() {
+  window.location = "php/inserisci.php";
+});
+  
+</script>
 
 </body>
 

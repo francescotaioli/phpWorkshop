@@ -28,15 +28,32 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Inserisci</a></li>
-      <li><a href="#">Modifica</a></li>
+      <li><a href="visualizza.php">Visualizza</a></li>
     
     </ul>
   </div>
 </nav>
 
-<?php
 
-echo "gg";
+
+
+
+<?php
+//includo la connessione in modo da non riscriverla più volte
+include '../connection/connection.php';
+
+$sql = "SELECT * from ruolo";
+$result = $connessione->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["descrizione"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+$connessione->close();
 ?>
 
 </body>
