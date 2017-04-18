@@ -1,11 +1,8 @@
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 --
 -- Database: `calciatori`
 --
-CREATE DATABASE IF NOT EXISTS `calciatori` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `calciatori`;
 
 -- --------------------------------------------------------
 
@@ -13,15 +10,21 @@ USE `calciatori`;
 -- Struttura della tabella `calciatore`
 --
 
-DROP TABLE IF EXISTS `calciatore`;
 CREATE TABLE `calciatore` (
   `id_calciatore` int(11) NOT NULL,
   `nome` varchar(255) DEFAULT NULL,
   `cognome` varchar(255) DEFAULT NULL,
   `data_nascita` date DEFAULT NULL,
-  `squadra` varchar(50) DEFAULT NULL,
   `ruolo` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `calciatore`
+--
+
+INSERT INTO `calciatore` (`id_calciatore`, `nome`, `cognome`, `data_nascita`, `ruolo`) VALUES
+(1, 'Francesco', 'Totti', '1965-03-16', 9),
+(2, 'Wojciech ', 'Szczsny', '1970-04-10', 1);
 
 -- --------------------------------------------------------
 
@@ -29,7 +32,6 @@ CREATE TABLE `calciatore` (
 -- Struttura della tabella `ruolo`
 --
 
-DROP TABLE IF EXISTS `ruolo`;
 CREATE TABLE `ruolo` (
   `id_ruolo` int(11) NOT NULL,
   `descrizione` text
@@ -75,7 +77,7 @@ ALTER TABLE `ruolo`
 -- AUTO_INCREMENT per la tabella `calciatore`
 --
 ALTER TABLE `calciatore`
-  MODIFY `id_calciatore` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_calciatore` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Limiti per le tabelle scaricate
 --
