@@ -27,8 +27,8 @@
       <a class="navbar-brand" href="../index.html">Elenco calciatori</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="inserisci.php">Inserisci</a></li>
-      <li><a href="#">Modifica</a></li>
+      <li><a href="inserisci.php">Inserisci</a></li>
+      <li class="active"><a href="visualizza.php">Visualizza</a></li>
     
     </ul>
   </div>

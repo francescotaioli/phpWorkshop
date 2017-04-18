@@ -1,8 +1,6 @@
 <?php
 include '../connection/connection.php';
 
-// la superglobals and $_POSTè usata per prendere i dati
-// nel form html abbiamo l'attributo name
 $nome = $_POST['nome'];
 $cognome = $_POST['cognome'];
 $data = $_POST['date'];
@@ -12,7 +10,7 @@ $sql = "INSERT INTO calciatore (nome, cognome, data_nascita,ruolo)
 VALUES ('$nome', '$cognome', '$data', '$ruolo')";
 
 if ($connessione->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "ok";
 } else {
     echo "Error: " . $sql . "<br>" . $connessione->error;
 }

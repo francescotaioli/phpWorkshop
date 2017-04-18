@@ -99,12 +99,12 @@
   <!--response message - positive-->
   <div class="alert alert-success a" id="alert-success" style="visibility:hidden;">
     
-    <strong>OK!</strong> Calciatore aggiutnto
+    <strong>OK!</strong> Calciatore aggiunto
 </div>
   <!--response message - negative-->
 <div class="alert alert-danger " id="alert-error" style="visibility:hidden;">
     
-    <strong>Opss!</strong> Ci deve essere quaalche problema
+    <strong>Opss!</strong> Ci deve essere qualche problema
   </div>
     
   </form>
@@ -117,15 +117,16 @@
             url: 'insert_calciatore.php',
             data: $(this).serialize(),
             success: function(data) {
-                $('#alert-success').css({
+              if (data == "ok"){
+                 $('#alert-success').css({
                   visibility:'visible'
                 });
-            },
-            error: function(data) {
-              $('#alert-error').css({
+              }else{
+                 $('#alert-error').css({
                   visibility:'visible'
                 });
-          }
+              }  
+            }
             
         });
       
